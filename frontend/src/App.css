@@ -1,0 +1,53 @@
+/* Reset default margin & padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body ko full width aur height do */
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #1e1e1e; /* dark background */
+  color: white;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* white space remove karne ke liye */
+}
+
+/* Main container full screen */
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #1e1e1e; /* same dark background */
+}
+
+
+.hover-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 255, 255, 0.2);
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+.active-nav {
+  font-weight: bold;
+  color: #fff !important;
+  text-decoration: underline;
+}

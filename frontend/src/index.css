@@ -1,0 +1,22 @@
+/* Reset default margin & padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body global styling */
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #1e1e1e; /* Dark background */
+  color: white;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Root ko full screen banaye rakho */
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
