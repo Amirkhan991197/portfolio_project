@@ -8,6 +8,9 @@ function AppNavbar({ darkMode, setDarkMode }) {
     setDarkMode(!darkMode);
   };
 
+  // ✅ Updated Nav Items
+  const navItems = ["home", "about", "skills", "projects", "certifications", "contact"];
+
   return (
     <Navbar
       expand="lg"
@@ -33,16 +36,16 @@ function AppNavbar({ darkMode, setDarkMode }) {
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="border-0" />
 
         <Navbar.Collapse id="basic-navbar-nav">
-          {/* Scrollspy List Inside Nav */}
+          {/* ✅ Updated Scrollspy Items */}
           <Nav as="ul" className="mx-auto align-items-center">
             <Scrollspy
-              items={["home", "projects", "certifications", "about", "contact"]}
+              items={navItems}
               currentClassName="active-nav"
               offset={-120}
               componentTag="div"
               className="d-flex flex-row"
             >
-              {["home", "projects", "certifications", "about", "contact"].map((item) => (
+              {navItems.map((item) => (
                 <Nav.Item as="li" key={item}>
                   <Nav.Link
                     href={`#${item}`}

@@ -7,9 +7,10 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 import Certifications from "./Certifications";
 import Contact from "./components/Contact";
+import CommentSection from "./CommentSection"; // ✅ Comment section import
 import AOS from "aos";
 import "aos/dist/aos.css";
-import "bootstrap/dist/css/bootstrap.min.css";  // bootstrap css import
+import "bootstrap/dist/css/bootstrap.min.css"; // bootstrap css import
 
 function App() {
   const [darkMode, setDarkMode] = useState(true); // ✅ Dark mode state
@@ -20,14 +21,18 @@ function App() {
 
   return (
     <div className={darkMode ? "bg-dark text-light" : "bg-light text-dark"}>
-     <AppNavbar darkMode={darkMode} setDarkMode={setDarkMode} />
+      <AppNavbar darkMode={darkMode} setDarkMode={setDarkMode} />
 
       <Hero />
       <About />
-      <Projects />
       <Skills />
+      <Projects />
       <Certifications />
       <Contact />
+
+      {/* ✅ New Comment Section */}
+      <CommentSection />
+
       <Footer />
     </div>
   );
